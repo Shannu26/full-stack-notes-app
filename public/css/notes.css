@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #83a4d4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #b6fbff,
+    #83a4d4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b6fbff,
+    #83a4d4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.card {
+  width: 50%;
+  padding: 20px;
+  margin: 10px auto;
+  border: 1px solid black;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: white;
+  opacity: 80%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.note-form {
+  width: 100%;
+  /* background-color: red; */
+  margin: auto;
+  height: 3rem;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+
+.note-form input {
+  width: 89%;
+  height: 100%;
+  border-radius: inherit;
+  border: none;
+  padding: 20px;
+  font-size: 2rem;
+  color: #1589ff;
+}
+
+.note-form input::placeholder {
+  color: skyblue;
+}
+
+.note-form input:focus {
+  outline: none;
+}
+
+.note-form button {
+  width: 10%;
+  height: 100%;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.note-form button i:hover {
+  color: skyblue;
+}
+
+.note-form button i {
+  width: 100%;
+  height: 100%;
+  font-size: 2.5rem;
+  margin: auto;
+  border: inherit;
+  color: #1589ff;
+}
+
+.todos {
+  width: 100%;
+  margin: auto;
+  /* background-color: pink; */
+  padding: 20px;
+}
+
+.todo {
+  width: 100%;
+  /* background-color: #1589ff; */
+  border: 2px solid #1589ff;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  border-radius: 25px;
+  min-height: 2.3rem;
+}
+
+.todo div,
+.todo div * {
+  display: inline-block;
+}
+
+.todo-li {
+  /* background-color: aqua; */
+  width: 75%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.todo li {
+  border-radius: inherit;
+  width: 100%;
+  min-height: 2.3rem;
+  padding-left: 20px;
+  padding-top: 10px;
+  /* background-color: blueviolet; */
+  text-align: justify;
+}
+
+.todo-a {
+  width: 10%;
+  min-height: 2.3rem;
+}
+
+.todo-a a {
+  width: 100%;
+  min-height: 2.3rem;
+  /* padding: 10px; */
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #ffea00;
+  /* background-color: antiquewhite; */
+  text-align: center;
+}
+
+.todo-form {
+  width: 10%;
+  min-height: 2.3rem;
+  /* background-color: #ffea00; */
+}
+
+.todo-form form {
+  width: 100%;
+  min-height: 2.3rem;
+}
+
+.todo-form button {
+  font-size: 1.5rem;
+  color: #ee4b2b;
+  cursor: pointer;
+  width: 100%;
+  min-height: 2.3rem;
+  background-color: transparent;
+  border: none;
+}
+
+.current-edit-todo {
+  background-color: #1589ff;
+}
