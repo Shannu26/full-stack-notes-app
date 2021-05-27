@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.categories {
+  /* background-color: aqua; */
+  width: 80%;
+  margin: 0 auto;
+  min-height: 80vh;
+  display: grid;
+  /* grid-gap: 3%; */
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.category {
+  /* width: 20%; */
+  height: 200px;
+  border: 1px solid black;
+  margin: 3%;
+  border-radius: 25px;
+  background-color: pink;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+}
+
+.category a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 25px 25px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.category a:hover {
+  background-color: #83a4d4;
+  color: white;
+}
+
+.category form button {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  border: none;
+  border-radius: 0 0 25px 25px;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.add-category {
+  display: flex;
+}
+
+.add-category i {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  /* padding-left: 50%; */
+  padding-top: 25%;
+  font-size: 4rem;
+}
+
+.add-category i:hover {
+  background-color: black;
+  color: white;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 30%;
+  display: none;
+}
+
+.add-category-form {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 40%;
+  height: 40vh;
+  background-color: lightskyblue;
+  z-index: 10;
+  display: none;
+  border-radius: 15px;
+}
+
+#close-form {
+  height: 20%;
+  /* background-color: purple; */
+  width: 10%;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+
+#close-form i {
+  /* background-color: white; */
+  width: 100%;
+  height: 100%;
+  font-size: 2.5rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#close-form i:hover {
+  color: red;
+}
+
+.add-category-form form {
+  /* background-color: red; */
+  width: 100%;
+  height: 80%;
+  border-radius: inherit;
+  position: relative;
+}
+
+.add-category-form form input {
+  outline: none;
+  display: block;
+  width: 90%;
+  height: 20%;
+  margin: 0 auto;
+  border-radius: 25px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding-left: 30px;
+  font-size: 1.3rem;
+  border: none;
+}
+
+.add-category-form form button {
+  width: 50%;
+  height: 20%;
+  border: none;
+  background-color: white;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.add-category-form form button:hover {
+  background-color: seagreen;
+  color: white;
+}
