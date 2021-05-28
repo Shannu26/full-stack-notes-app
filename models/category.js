@@ -10,6 +10,10 @@ const categorySchema = new mongoose.Schema({
       ref: "Note",
     },
   ],
+  owner: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
 });
 
 categorySchema.post("findOneAndDelete", async function (category) {
