@@ -4,6 +4,22 @@
   margin: 0;
 }
 
+.flash {
+  width: 30%;
+  height: 2rem;
+  margin: auto;
+  position: absolute;
+  top: 60px;
+  /* left: 30px; */
+  left: 35%;
+  /* background-color: pink; */
+  text-align: center;
+  padding-top: 5px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  color: red;
+}
+
 .login-form {
   /* background-color: aqua; */
   width: 30%;

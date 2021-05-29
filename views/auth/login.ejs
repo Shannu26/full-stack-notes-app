@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
+    <% if(msg.length != 0) { %>
+    <p class="flash"><%= msg %></p>
+    <% } %>
     <form action="/auth/login" , method="POST" class="login-form">
       <!-- <h1>Login Page</h1> -->
       <input type="text" name="username" placeholder="Username" required />

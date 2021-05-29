@@ -16,24 +16,26 @@ router.post("/register", async (req, res) => {
     if (err) console.log(err);
     else console.log(user);
   });
-  res.redirect("/");
+  res.redirect("/categories");
 });
 
 router.get("/login", (req, res) => {
-  res.render("auth/login");
+  res.render("auth/login", { msg: req.flash("error") });
+  // res.render("auth/login", { msg: "Hi" });
 });
 
 router.post(
   "/login",
   passport.authenticate("local", {
     successRedirect: "/categories",
-    failureRedirect: "/",
+    failureRedirect: "/auth/login",
+    failureFlash: "Username and Password are not valid",
   })
 );
 
 router.get("/logout", (req, res) => {
   req.logOut();
-  res.redirect("/");
+  res.redirect("/auth/login");
 });
 
 module.exports = router;

@@ -13,8 +13,10 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/css/notes.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
   </head>
   <body>
+    <%- include("../partials/navbar") %>
     <div class="card">
       <form
         action="/categories/<%= category.id %>/notes/<%= todo.id %>?_method=PUT"

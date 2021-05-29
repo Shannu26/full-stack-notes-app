@@ -10,6 +10,7 @@ const methodOverride = require("method-override");
 const passport = require("passport");
 const localStrategy = require("passport-local");
 const session = require("express-session");
+const flash = require("connect-flash");
 
 const User = require("./models/user");
 
@@ -44,6 +45,7 @@ app.use(
     saveUninitialized: true,
   })
 );
+app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new localStrategy(User.authenticate()));

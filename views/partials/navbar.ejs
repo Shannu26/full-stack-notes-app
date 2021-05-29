@@ -1,0 +1,16 @@
+<nav>
+  <div>
+    <ul>
+      <li><a href="#" class="app-name">Notter</a></li>
+      <li><a href="/categories">Home</a></li>
+    </ul>
+    <ul>
+      <% if(!user) { %>
+      <li><a href="/auth/login">Login</a></li>
+      <li><a href="/auth/register">Register</a></li>
+      <% } else { %>
+      <li><a href="/auth/logout">Logout</a></li>
+      <% } %>
+    </ul>
+  </div>
+</nav>

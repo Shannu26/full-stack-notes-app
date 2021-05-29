@@ -2,6 +2,7 @@ const Category = require("./models/category");
 
 exports.isLoggedIn = (req, res, next) => {
   if (req.isAuthenticated()) {
+    res.locals.user = req.user;
     return next();
   } else res.redirect("/auth/login");
 };
