@@ -9,3 +9,11 @@ hamburger.addEventListener("click", () => {
     container.style.display = "block";
   }
 });
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 1000) {
+    container.style.display = "block";
+  } else {
+    container.style.display = "none";
+  }
+});

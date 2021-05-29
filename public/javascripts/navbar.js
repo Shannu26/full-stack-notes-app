@@ -19,5 +19,6 @@ window.addEventListener("resize", () => {
   if (window.innerWidth > 1000) {
     hamburger_nav.style.display = "none";
     backdrop.style.display = "none";
+    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
   }
 });
