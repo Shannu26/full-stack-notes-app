@@ -4,12 +4,25 @@
   margin: 0;
 }
 
+.flash {
+  width: 30%;
+  height: 2rem;
+  margin: 0 auto;
+  margin-top: 4%;
+  /* background-color: pink; */
+  text-align: center;
+  padding-top: 5px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  color: red;
+}
+
 .register-form {
   /* background-color: aqua; */
   width: 30%;
   height: 60vh;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 4%;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -63,4 +76,28 @@
   border-radius: 5px;
   height: 80%;
   padding-top: 8px;
+}
+
+@media (max-width: 1200px) {
+  .flash,
+  .register-form,
+  .login {
+    width: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+  .flash,
+  .register-form,
+  .login {
+    width: 90%;
+  }
+}
+
+@media (max-width: 300px) {
+  .flash,
+  .register-form,
+  .login {
+    width: 99%;
+  }
 }

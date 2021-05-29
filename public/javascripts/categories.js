@@ -1,5 +1,5 @@
 const addCategory = document.getElementById("add-category");
-const backdrop = document.getElementsByClassName("backdrop")[0];
+// const backdrop = document.getElementsByClassName("backdrop")[0];
 const addCategoryForm = document.getElementsByClassName("add-category-form")[0];
 const closeForm = document.getElementById("close-form");
 const categoryForm = document.getElementById("category-form");

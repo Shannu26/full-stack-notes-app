@@ -10,7 +10,8 @@ router.get("/", isLoggedIn, async (req, res) => {
   const category = await Category.findById(req.params.categoryId).populate(
     "todos"
   );
-  res.render("notes/index", { category });
+  const categories = await Category.find({ owner: req.user.id });
+  res.render("notes/index", { category, categories });
 });
 
 router.post("/", isLoggedIn, async (req, res) => {

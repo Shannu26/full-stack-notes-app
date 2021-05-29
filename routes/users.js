@@ -5,18 +5,24 @@ const User = require("../models/user");
 const passport = require("passport");
 
 router.get("/register", (req, res) => {
-  res.render("auth/register");
+  res.render("auth/register", { msg: req.flash("error") });
 });
 
 router.post("/register", async (req, res) => {
-  const { username, password, email } = req.body;
-  const newUser = new User({ username, email });
-  const user = await User.register(newUser, password);
-  req.login(user, (err) => {
-    if (err) console.log(err);
-    else console.log(user);
-  });
-  res.redirect("/categories");
+  try {
+    const { username, password, email } = req.body;
+    const newUser = new User({ username, email });
+    const user = await User.register(newUser, password);
+    req.login(user, (err) => {
+      if (err) console.log(err);
+      else console.log(user);
+    });
+    res.redirect("/categories");
+  } catch (err) {
+    console.log(err.message);
+    req.flash("error", err.message);
+    res.redirect("/auth/register");
+  }
 });
 
 router.get("/login", (req, res) => {

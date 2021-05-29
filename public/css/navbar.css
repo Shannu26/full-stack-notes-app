@@ -1,9 +1,13 @@
-nav {
+.nav {
   background-color: black;
   height: 3.5rem;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-nav div {
+.nav div {
   display: flex;
   /* background-color: pink; */
   height: 100%;
@@ -11,7 +15,7 @@ nav div {
   align-items: center;
 }
 
-nav div ul {
+.nav div ul {
   display: flex;
   /* background-color: aqua; */
   width: 50%;
@@ -21,25 +25,25 @@ nav div ul {
   height: 100%;
 }
 
-nav div ul:nth-of-type(2) {
+.nav div ul:nth-of-type(2) {
   /* background-color: yellowgreen; */
   flex-direction: row-reverse;
   /* justify-content: left; */
 }
 
-nav div ul li {
+.nav div ul li {
   padding: 0 100px 0 100px;
   list-style: none;
 }
 
-nav div ul li a {
+.nav div ul li a {
   text-decoration: none;
   color: white;
   font-size: 1.2rem;
   height: 80%;
 }
 
-nav div ul li a:hover {
+.nav div ul li a:hover {
   background-color: white;
   color: black;
   padding: 4px;
@@ -56,4 +60,67 @@ nav div ul li a:hover {
   background-color: black;
   color: white;
   padding: 0;
+}
+
+#hamburger {
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 30%;
+  display: none;
+}
+
+.hamburger-nav {
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  display: none;
+  z-index: 100;
+}
+
+.hamburger-nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-nav ul li a {
+  color: white;
+  text-decoration: none;
+  /* background-color: red; */
+  width: 100%;
+  display: block;
+  height: 2.5rem;
+  /* padding: 5px; */
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+  .nav div ul li {
+    display: none;
+  }
+  #hamburger {
+    display: block;
+  }
+}
+
+@media (min-width: 1001px) {
+  .nav div ul li {
+    display: block;
+  }
+  #hamburger {
+    display: none;
+  }
 }

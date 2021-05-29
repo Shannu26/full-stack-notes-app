@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="/css/register.css" />
   </head>
   <body>
+    <% if(msg.length != 0) { %>
+    <p class="flash"><%= msg %></p>
+    <% } %>
     <form action="/auth/register" method="POST" class="register-form">
       <input type="text" name="username" placeholder="Username" required />
       <input type="email" name="email" placeholder="Email" required />

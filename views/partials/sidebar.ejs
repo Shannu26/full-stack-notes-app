@@ -1,0 +1,13 @@
+<div class="container">
+  <nav class="sidebar">
+    <ul>
+      <% categories.forEach(curr_category => { %>
+      <li>
+        <a href="/categories/<%= curr_category.id %>/notes" id="<%= category.id == curr_category.id ? "active" : "" %>"><%= curr_category.name %></a>
+      </li>
+      <% }) %>
+    </ul>
+  </nav>
+</div>
+
+<script src="/javascripts/sidebar.js"></script>

@@ -53,13 +53,13 @@ passport.use(new localStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.get("/", (req, res) => {
-  res.send("Welcome");
-});
-
 app.use("/auth", userRoutes);
 app.use("/categories", categoryRoutes);
 app.use("/categories/:categoryId/notes", noteRoutes);
+
+app.all("*", (req, res) => {
+  res.redirect("/categories");
+});
 
 const port = process.env.PORT || 3000;
 

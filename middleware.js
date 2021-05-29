@@ -9,8 +9,8 @@ exports.isLoggedIn = (req, res, next) => {
 
 exports.authorizeDeleteCategory = async (req, res, next) => {
   const category = await Category.findById(req.params.id);
-  if (category.owner == req.user) return next();
-  else res.redirec("/");
+  if (category.owner == req.user.id) return next();
+  else res.redirect("/");
 };
 
 exports.authorizeUser = async (req, res, next) => {
