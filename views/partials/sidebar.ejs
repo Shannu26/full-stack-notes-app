@@ -3,7 +3,8 @@
     <ul>
       <% categories.forEach(curr_category => { %>
       <li>
-        <a href="/categories/<%= curr_category.id %>/notes" id="<%= category.id == curr_category.id ? "active" : "" %>"><%= curr_category.name %></a>
+        <a href="/categories/<%= curr_category.id %>/notes" id="<%= category.id == curr_category.id ? "active" : "" %>"><%= curr_category.name.length > 20 ? curr_category.name.substring(0, 20) +
+          "..." : curr_category.name %></a>
       </li>
       <% }) %>
     </ul>
