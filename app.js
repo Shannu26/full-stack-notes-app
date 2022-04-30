@@ -6,6 +6,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
+const MongoStore = require("connect-mongo");
 const methodOverride = require("method-override");
 const passport = require("passport");
 const localStrategy = require("passport-local");
@@ -41,6 +42,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
+    store: MongoStore.create({
+      mongoUrl: process.env.MONGO_URL,
+    }),
     resave: true,
     saveUninitialized: true,
   })
